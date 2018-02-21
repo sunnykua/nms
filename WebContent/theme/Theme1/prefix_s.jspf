@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="theme/Theme1/link_view.css">
+<link rel="stylesheet" type="text/css" href="theme/Theme1/overview.css">
+<link href="theme/Pacifico/Pacifico.css" rel="stylesheet" type="text/css">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<jsp:include page="/Settings">
+	<jsp:param value="accountAllItems" name="action" />
+</jsp:include>
+
+<script>
+function logout() {
+		   $.ajax({
+    		   type: "POST",
+    		   url: "Login?type=logout",
+		       success: function(data) {
+		    	   location.href="logout.jsp";
+		        }
+	       });
+}
+</script>
+<div id="header_bar">
+	<table>
+		<tr>
+			<td style="width:1024px;">
+				<div style="float:left;">&nbsp;<a href="javascript:void(0)" onclick="window.open('http://www.via.com.tw/en/index.jsp');"><img style="heigh:130px;width:130px;border-style: none;" src="images/vialogo52.png"/></a></div>
+		    	<div style="float:right;font-size: 0.8em;">
+		    	<c:forEach var="acc" items="${accountAllItems}" varStatus="status">
+	    			<c:if test="${fn:toLowerCase(acc.userName) == fn:toLowerCase(sessionScope.username)}">${acc.name}</c:if>
+	    		</c:forEach>
+		    	&nbsp;<%-- <a href="javascript:void(0)" onclick="logout();">Logout</a> --%>&nbsp;</div>
+				<div style="font: 400 36px/1.35 'Pacifico', Helvetica, sans-serif; color: #2b2b2b;"><a style="text-decoration:none;color:#191970;">CyberExpert</a></div>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="main_menu"></div>

@@ -1,0 +1,23 @@
+#div_bar {
+	/* background-color: #87cefa;
+	width: 100%;
+	line-height: 20px;			
+	text-align: center; */
+	font-weight: bold;
+	font-size: 1em;
+	height: 20px;
+}
+
+#poe_vlan {
+	height: 310px;
+}
+
+#hostTable {
+	margin: auto ;
+}
+
+#hostTable caption {
+	font-size: 1.3em;
+	font-weight: bold;
+	border-bottom: 1px solid #729ea5;
+}

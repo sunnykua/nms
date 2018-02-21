@@ -1,0 +1,33 @@
+.interfaceTable_l {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+.interfaceTable_l caption {
+	font-size: 1.3em;
+	font-weight: bold;
+	border-bottom: 1px solid #729ea5;
+	width: 300px;
+}
+.interfaceTable {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+.interfaceTable caption {
+	font-size: 1.3em;
+	font-weight: bold;
+	border-bottom: 1px solid #729ea5;
+}
+.interfaceTable th {
+	padding: 0px 5px;
+	border-bottom: 1px solid #729ea5;
+}
+.interfaceTable td {
+	text-align: center;
+	border-bottom: 1px solid #729ea5;
+}
+.buttonSection {
+	margin: 1px auto 1px;
+	text-align: center;
+}

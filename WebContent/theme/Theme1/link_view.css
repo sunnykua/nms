@@ -1,0 +1,49 @@
+div.devDescr {
+	font-size: 1em;
+	font-weight: bold;
+}
+table.panel {
+	margin: auto;
+	background-color: #d4e3e5;
+	border: 15px solid #d4e3e5;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #888888;
+}
+th.portId {
+	width: 30px;
+	height: 15px;
+	text-align: center;
+	color: dimgray;
+}
+td.adminDown, td.linkUp, td.linkDown {
+	width: 30px;
+	height: 15px;
+	border-style: ridge;
+	border-color: dimgray;
+	border-width: 2px;
+}
+td.adminDown, div.iconAdminDown {
+	background-color: orangered;
+}
+td.linkUp, div.iconLinkUp {
+	background-color: greenyellow;
+}
+td.linkDown, div.iconLinkDown {
+	background-color: gray;
+}
+table.legend {
+/* 	background-color: black; */
+}
+td.iconText {
+	color: black;
+	font-size: 10px;
+	letter-spacing: 1px;
+	padding: 0 5px 0;
+}
+div.iconAdminDown, div.iconLinkUp, div.iconLinkDown {
+	position: relative;
+	left: 1px;
+	width: 8px;
+	height: 8px;
+	padding: 0;
+}

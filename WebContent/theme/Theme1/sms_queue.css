@@ -1,0 +1,48 @@
+#page_content {
+    padding-top: 1em;
+    margin-bottom: 2em; 
+    width:100%;
+    margin:auto;
+}
+
+#page_title {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+.buttonGroup {
+	margin-bottom: 10px;
+}
+
+.tableSMSQueue {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+.tableSMSQueue td, .tableSMSQueue th {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.thCount, .tdCount {
+	width: 40px;
+	text-align: center;
+}
+.thSelectAllCheck, .tdSelectCheck {
+	width: 40px;
+	text-align: center;
+}
+.thItemName {
+	width: 100px;
+}
+.thItemValue, .tdItemValue {
+	width: 800px;
+}
+
+div.centered {
+    margin:0px auto;
+    width:300px;
+}
+.highlight { background-color: yellow }

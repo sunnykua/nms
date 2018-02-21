@@ -1,0 +1,107 @@
+.topic {
+	font-weight: bold;
+	font-size: 1.5em;
+	//margin-bottom: 1em;
+}
+
+.chart_block {
+	margin-top: 2em;
+}
+
+.chart_title {
+	font-weight: bold;
+	font-size: 1em;
+	margin: 10px 0;
+}
+
+.chart_setting {
+	font-size: 1em;
+	margin: 10px 0;
+	font-weight: bold;
+}
+
+.port_select {
+	font-size: 1em;
+	width: 80px;
+	margin: 0 10px;
+}
+
+.port_apply {
+	font-size: 1em;
+	margin: 0 10px;
+}
+/**********************************/
+#realtimechart_table {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+#realtimechart_table caption {
+	/* font-weight: bold; */
+	font-size: 1.3em; /* 1.5em to 1.3em */
+	font-weight: bold;
+	border-bottom: 1px solid #729ea5;
+}
+#realtimechart_table th {
+	/* background-color: #acc8cc;
+	border: 1px solid #729ea5;
+	padding: 4px; */
+	border-bottom: 1px solid #729ea5;
+}
+#realtimechart_table td {
+	/* background-color: #d4e3e5;
+	border: 1px solid #729ea5;
+	padding: 2px; */
+	text-align: center;
+	border-bottom: 1px solid #729ea5;
+}
+/**********************************/
+#historychart_table {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+#historychart_table caption {
+	/* font-weight: bold; */
+	font-size: 1.3em; /* 1.5em to 1.3em */
+	font-weight: bold;
+	border-bottom: 1px solid #729ea5;
+}
+#historychart_table th {
+	/* background-color: #acc8cc;
+	border: 1px solid #729ea5;
+	padding: 4px; */
+	border-bottom: 1px solid #729ea5;
+}
+#historychart_table td {
+	/* background-color: #d4e3e5;
+	border: 1px solid #729ea5;
+	padding: 2px; */
+	text-align: center;
+	border-bottom: 1px solid #729ea5;
+}
+/**********************************/
+#hostchart_table {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+#hostchart_table caption {
+	/* font-weight: bold; */
+	font-size: 1.3em; /* 1.5em to 1.3em */
+	font-weight: bold;
+	border-bottom: 1px solid #729ea5;
+}
+#hostchart_table th {
+	/* background-color: #acc8cc;
+	border: 1px solid #729ea5;
+	padding: 4px; */
+	border-bottom: 1px solid #729ea5;
+}
+#hostchart_table td {
+	/* background-color: #d4e3e5;
+	border: 1px solid #729ea5;
+	padding: 2px; */
+	text-align: center;
+	border-bottom: 1px solid #729ea5;
+}

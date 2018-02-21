@@ -1,0 +1,48 @@
+
+#page_content {
+    padding-top: 1em;
+    margin-bottom: 2em;
+}
+
+.section_title {
+	font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+.account_info_table {
+    height: 200px;
+    margin: 20px auto;
+}
+.account_info_table td {
+    padding: 0 10px;
+}
+
+#AccountTable {
+	/* table-layout: fixed; */
+	margin: 20px auto 0;
+	border-collapse: collapse;
+}
+#AccountTable caption {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+#AccountTable th {
+	/* background-color: #acc8cc;
+	border: 1px solid #729ea5;
+	padding: 6px; */
+	border-bottom: 1px solid #729ea5;
+}
+#AccountTable td {
+	/* background-color: #d4e3e5;
+	border: 1px solid #729ea5;
+	padding: 6px; 
+	text-align: center;	 */
+	border-bottom: 1px solid #729ea5;
+    padding: 5px 10px;
+    text-align: center;
+}
+.buttonSection {
+	margin: 1px auto 1px;
+	text-align: center;
+}

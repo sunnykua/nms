@@ -1,0 +1,152 @@
+
+#page_content {
+    padding-top: 1em;
+    margin-bottom: 2em;
+}
+#page_title {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+}
+.tableType {
+	border-collapse: collapse;
+}
+.tableType td {
+	padding: 5px 10px;
+	font-size:14px;
+}
+.td_center_align {
+	text-align: center;
+}
+.th_left_align {
+	text-align: left;
+}
+.deleteOption {
+	text-align: center;
+}
+.deleteBtu {
+	height: 40px;
+	width: 80px;
+}
+#scandiv_display {
+	display: none;
+    text-align: center;
+}
+.deviceTable_tr:nth-child(even) {
+    background-color:#E0E0FF;
+}
+.deviceTable_tr:nth-child(odd) {
+    background-color:#FFFFFF;
+}
+.deviceTable_th {
+    background-color:#C0C0FF;
+}
+
+.addTable {
+	margin: auto;
+}
+.selectTable {
+	margin: auto;
+    margin-top: 10px;
+}
+.selectTable th{
+	width:200px;
+	text-align: left;
+    margin-top: 10px;
+}
+.optionTable {
+	margin: auto;
+    margin-top: 10px;
+}
+.selectTitle {
+	font-weight: bold; 
+	font-size: 1em;
+	margin: auto;
+	width:400px;
+}
+.optionTitle {
+	font-weight: bold; 
+	font-size: 1em;
+	margin: auto;
+	width:400px;
+}
+.selectOptionDiv {
+	height:50px;
+	width:350px;
+	margin: auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#a9a9a9
+}
+.selectOptionDivV3 {
+	height:170px;
+	width:350px;
+	margin: auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#a9a9a9
+}
+.optionDiv {
+	height:70px;
+	width:370px;
+	margin: auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#a9a9a9
+}
+.settingIframe {
+	width:100%;
+	border:none;
+}
+.settingTextLen {
+	width: 200px;
+}
+.settingTable td {
+	width: 200px;
+}
+.devBtuGroup {
+	padding-bottom:5px;
+}
+.snmpDiv {
+	height:280px;
+	width:420px;
+	//margin: auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#a9a9a9
+}
+.otherSettingTitle {
+	font-weight: bold; 
+	font-size: 1em;
+	//margin: auto;
+	width:420px;
+}
+.otherSettingDiv {
+	height:30px;
+	width:420px;
+	//margin: auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#a9a9a9
+}
+
+.file {
+    position: relative;
+    overflow: hidden;
+}
+.file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

@@ -1,0 +1,98 @@
+
+#page_content {
+    padding-top: 1em;
+    margin-bottom: 2em;
+}
+
+#page_title {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+}
+
+#tree_view_section {
+	margin: 10px auto 10px;
+	padding: 10px;
+	background-color: #F2F2F2;
+}
+
+#legend_table {
+	margin-bottom: 20px;
+	border-collapse: collapse;
+}
+.legend_icon {
+	width: 30px;
+}
+.legend_text {
+	width: 100px;
+}
+/*****************************************/
+#buttonGroup {
+	text-align: center;
+	margin: 10px 0px;
+}
+
+#trace_path_section {
+	text-align: center;
+}
+
+#TopologyTable {
+	//width: 200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#TopologyTable th, #TopologyTable td {
+	//border:1px solid black;
+	border-bottom: 1px solid #729ea5;
+	padding: 5px 0px;
+}
+
+.icon_cell {
+	width: 30px;
+}
+.ip_cell {
+	width: 80px;
+}
+.port_cell {
+	width: 60px;
+}
+.history_cell {
+	width: 60px;
+}
+.realtime_cell {
+	width: 60px;
+}
+.direction_cell {
+	width: 50px;
+	font-weight: bold;
+}
+
+/* #modelList li {
+	color: #bfe1f1;
+	font-size: 2em;
+} */
+.node_has_next, .node_no_next {
+	//color: #bfe1f1;
+}
+
+.toplogyNumber {
+	width:30px;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+.highRate {
+	color:red;
+	font-weight: bold;
+}
+.middleRate {
+	color:#ff9900;
+	font-weight: bold;
+}
+.lowRate {
+	color:green;
+	font-weight: bold;
+}

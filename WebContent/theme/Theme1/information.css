@@ -1,0 +1,99 @@
+#Page_Content {
+	width: 1280px;
+	height: 1000px;						/* NOTE: div Function_Content also need to modify */
+	margin: 0 auto;
+}
+
+/****************************************************/
+#Device_List {
+	background-color: #A9A9A9;
+	width: 248px;
+	height: inherit;
+	float: left;
+	//padding: 10px;					/* do not exceed the specified width on upper-layer */
+}
+
+#Device_List ul {
+	list-style-type: none;
+	padding: 0px;						/* it will also cancel the default padding-left of ul */
+}
+
+#Device_List li {
+	padding: 0;
+	margin: 0;
+}
+
+.List_Item {
+	//margin: 5px 0;
+	margin: 0;
+	//height: 3em;
+	//border: 3px solid #32CD32;			/* #32CD32 */
+	//border: 1px solid white;
+	//border-radius: 5px;
+	//background-color: #808080;
+	text-align: center;
+	cursor: pointer;
+}
+
+.List_Item_Slt {
+	//border: 3px solid #008000;
+	background-color: #DCDCDC;
+}
+
+.List_Item .Item_Name {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.List_Item .Item_Desc {
+	font-size: 1em;
+}
+
+.List_Seperater hr {
+	
+}
+
+.Item_Seperater hr {
+	height: 1px;
+	width: 90%;
+}
+
+.List_Item hr {
+	margin: 1px auto;
+	border: 0;
+	height: 1px;
+	width: 90%;
+	background-color:#d4d4d4;
+}
+
+/****************************************************/
+#Device_Content {
+	background-color: #DCDCDC;
+	width: 1032px;
+	height: inherit;
+	margin-left: 248px;
+}
+
+#Function_Link {
+	width: 100%;
+	height: 50px;
+	display: table;
+}
+
+#Link_Container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#Function_Content {
+	background-color: #DCDCDC;
+	height: 950px;
+}
+
+#Function_Content iframe {
+	background-color: #DCDCDC;
+	border: none;
+	width: 100%;
+	height: inherit;
+	display: block;
+}

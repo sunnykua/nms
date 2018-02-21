@@ -1,0 +1,28 @@
+#about_info {
+  margin: auto;
+  width: 500px;
+  margin-top: 50px;
+  font-family: Helvetica;
+  
+}
+
+#about_table_title td {
+  color:#191970;
+  font-weight:bold;
+}
+
+#about_table{
+  margin-top:30px;
+}
+
+#about_table th{
+  color:#191970;
+  float:left;
+  font-size:18px;
+  margin-top:10px;
+}
+
+#about_table td {
+  /* border-bottom: 1px solid #729ea5; */
+  font-size:14px;
+}

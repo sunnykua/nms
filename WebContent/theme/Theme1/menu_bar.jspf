@@ -1,0 +1,238 @@
+<script type="text/javascript" src="theme/JSCookMenu/JSCookMenu.js"></script>
+<link rel="stylesheet" type="text/css" href="theme/JSCookMenu/ThemeGray/theme.css">
+<script type="text/javascript" src="theme/JSCookMenu/ThemeGray/theme.js"></script>
+
+<script type="text/javascript">
+function createMainMenu(user, mailQueueEnable, smsQueueEnable) {
+	var mailQueueItem = (user < 1 || mailQueueEnable) ? [ null, 'Mail Queue', 'mail_queue.jsp', null, null] : null;
+	var smsQueueItem = (user < 1 || smsQueueEnable) ? [ null, 'SMS Queue', 'sms_queue.jsp', null, null] : null;
+    if(user<2){
+    	var menu =
+    		[
+				[ null, 'Dashboard', 'dashboard.jsp', null, null],
+                [ null, 'Device', 'device.jsp', null, null],
+    			[ null, 'Topology', 'topology.jsp', null, null],
+    			[ null, 'Group', 'group.jsp', null, null],
+    			[ null, 'Log', null, null, null,
+    				[ null, 'Server Log', 'log_viewer.jsp', null, null],
+    				[ null, 'Server Alarm', 'log_viewer.jsp?level=error', null, null]
+    			],
+    			[ null, 'Account', 'account.jsp', null, null],
+    			[ null, 'Settings', 'settings.jsp', null, null,
+    			  mailQueueItem,
+    			  smsQueueItem,
+    			  	[ null, 'Report', 'device_report_select.jsp', null, null]
+    			],
+    			[ null, 'Tools', 'tools.jsp', null, null],
+    			[ null, 'About', 'about.jsp', null, null]
+    		];
+
+    	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+    	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+    } else {
+    	var menu =
+    		[
+                [ null, 'Dashboard', 'dashboard.jsp', null, null],
+                [ null, 'Device', 'device.jsp', null, null],
+    			[ null, 'Topology', 'topology.jsp', null, null ],
+    			[ null, 'Log', null, null, null,
+    				[ null, 'Server Log', 'log_viewer.jsp', null, null],
+    				[ null, 'Server Alarm', 'log_viewer.jsp?level=error', null, null]
+    			],
+    			[ null, 'Account', 'account.jsp', null, null],
+    			[ null, 'About', 'about.jsp', null, null]
+    		];
+
+    	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+    	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+    }
+}
+
+function createFunctionMenu(ip) {
+	var urlOverView = "overview.jsp?ip=" + ip ;
+	var urlLinkStatus = "link_view.jsp?ip=" + ip ;
+	var urlPortStatus = "port_status.jsp?ip=" + ip ;
+	var urlPortStatistics = "port_statistics.jsp?ip=" + ip ;
+	var urlEtherStatistics = "etherlike_statistics.jsp?ip=" + ip ;
+	var urlRmonStatistics = "rmon_statistics.jsp?ip=" + ip ;
+	var urlVlanGlobal = "vlan_global.jsp?ip=" + ip ;
+	var urlVlanInterface = "vlan_interface.jsp?ip=" + ip ;
+	var urlPoeGlobal = "poe_global.jsp?ip=" + ip ;
+	var urlPoeInterface = "poe_interface.jsp?ip=" + ip ;
+	var urlChart = "chart_select.jsp?ip=" + ip ;
+	var urlAllVlanList = "all_vlanlist.jsp?ip=" + ip ;
+	var urlCurrentVlan = "current_vlanlist.jsp?ip=" + ip ;
+	var menu =
+		[
+            [ null, 'OverView', urlOverView, null, null],
+			[ null, 'Statistics', null, null, null,
+				[ null, 'Port Statistic', urlPortStatistics, null, null],
+				[ null, 'EtherLike Statistic', urlEtherStatistics, null, null],
+				[ null, 'Rmon Statistic', urlRmonStatistics, null, null]
+			],
+			//[ null, 'Interface', null, null, null,
+			    //[ null, 'Port Status', urlPortStatus, null, null],
+			    //[ null, 'VLAN Interface', urlVlanInterface, null, null],
+			    //[ null, 'PoE Interface', urlPoeInterface, null, null]
+			  //],
+			[ null, 'VLAN',  urlAllVlanList, null, null ]
+			//[ null, 'Chart', urlChart, null, null ]
+
+		];
+
+	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+}
+
+function createFwMenu(ip) {
+	var urlOverView = "fw_overview.jsp?ip=" + ip ;
+	var menu =
+		[
+            [ null, 'OverView', urlOverView, null, null],
+		];
+
+	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+}
+
+function createServerMenu(ip) {
+	var urlOverView = "server_overview.jsp?ip=" + ip ;
+	var menu =
+		[
+            [ null, 'Server OverView', urlOverView, null, null],
+		];
+
+	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+}
+
+function createAcMenu(ip) {
+	var wlan_ac_overview = "wlan_ac_overview.jsp?ip=" + ip ;
+    var wlan_ac_friendly_ap = "wlan_ac_friendly_ap.jsp?ip=" + ip ;
+    var wlan_ac_rogue_ap = "wlan_ac_rogue_ap.jsp?ip=" + ip ;
+    
+    var wlan_ap_list = "wlan_ap_list.jsp?ip=" + ip ;
+    var wlan_ap_realtime_chart = "wlan_ap_realtime_chart.jsp?ip=" + ip ;
+    var wlan_ap_history_chart = "wlan_ap_history_chart.jsp?ip=" + ip ;
+    
+    
+    var wlan_client_list = "wlan_client_list.jsp?ip=" + ip ;
+    var wlan_client_device_list="wlan_client_device_list.jsp?ip=" + ip ;
+    var wlan_client_number_chart = "wlan_client_number_chart.jsp?ip=" + ip ;    
+    
+    var wlan_ac_log = "wlan_ac_log.jsp?ip=" + ip ;
+    var wlan_apclient_log = "wlan_apclient_log.jsp?ip=" + ip ;    
+    
+	var menu =
+		[
+			[ null, 'AC', null, null, null,
+			  [ null, 'AC Overview', wlan_ac_overview, null, null],
+			  [ null, 'Friendly AP', wlan_ac_friendly_ap, null, null],
+			  [ null, 'Rogue AP', wlan_ac_rogue_ap, null, null]
+			],
+			[ null, 'AP', null, null, null,
+			    [ null, 'AP List', wlan_ap_list, null, null],
+			    [ null, 'AP Real-Time Chart', wlan_ap_realtime_chart, null, null],
+			    [ null, 'AP History Chart', wlan_ap_history_chart, null, null]
+			],
+			[ null, 'Client', null, null, null,
+			  [ null, 'Client List', wlan_client_list, null, null],
+			  [ null, 'Client Device List', wlan_client_device_list, null, null],
+			  [ null, 'Client Number Chart', wlan_client_number_chart, null, null]
+			],
+			[ null, 'Log', wlan_ac_log, null, null//,
+			  //[ null, 'AC Log', wlan_ac_log, null, null],
+			  //[ null, 'AP/Client Log', wlan_apclient_log, null, null]
+			]
+		];
+
+	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+}
+
+function createRemoteAcMenu(remote_address,remote_device_ip) {
+	var wlan_ac_overview = "remote_wlan_ac_overview.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    var wlan_ac_friendly_ap = "remote_wlan_ac_friendly_ap.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    var wlan_ac_rogue_ap = "remote_wlan_ac_rogue_ap.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    
+    var wlan_ap_list = "remote_wlan_ap_list.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    var wlan_ap_realtime_chart = "remote_wlan_ap_realtime_chart.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    var wlan_ap_history_chart = "remote_wlan_ap_history_chart.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    
+    
+    var wlan_client_list = "remote_wlan_client_list.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    var wlan_client_device_list="remote_wlan_client_device_list.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    var wlan_client_number_chart = "remote_wlan_client_number_chart.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;  
+    
+    var wlan_ac_log = "remote_wlan_ac_log.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;
+    var wlan_apclient_log = "remote_wlan_apclient_log.jsp?remote_address=" + remote_address + "&remote_device_ip=" + remote_device_ip;   
+    
+	var menu =
+		[
+			[ null, 'AC', null, null, null,
+			  //[ null, 'AC Overview', wlan_ac_overview, null, null],
+			  [ null, 'Friendly AP', wlan_ac_friendly_ap, null, null],
+			  [ null, 'Rogue AP', wlan_ac_rogue_ap, null, null]
+			],
+			[ null, 'AP', null, null, null,
+			    [ null, 'AP List', wlan_ap_list, null, null],
+			    //[ null, 'AP Real-Time Chart', wlan_ap_realtime_chart, null, null],
+			    //[ null, 'AP History Chart', wlan_ap_history_chart, null, null]
+			],
+			[ null, 'Client', null, null, null,
+			  [ null, 'Client List', wlan_client_list, null, null],
+			  [ null, 'Client Device List', wlan_client_device_list, null, null],
+			  //[ null, 'Client Number Chart', wlan_client_number_chart, null, null]
+			],
+			[ null, 'Log', wlan_ac_log, null, null//,
+			  //[ null, 'AC Log', wlan_ac_log, null, null],
+			  //[ null, 'AP/Client Log', wlan_apclient_log, null, null]
+			]
+		];
+
+	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+}
+
+function createNmsMenu(ip) {
+	var urlDashboard = "nms_dashboard.jsp?address=" + ip ;
+	var urlOverView = "nms_device.jsp?ip=" + ip ;
+	var urlNmsTopology = "nms_topology.jsp?ip=" + ip ;
+	var menu =
+		[
+            [ null, 'Dashboard', urlDashboard, null, null],
+            [ null, 'Device', urlOverView, null, null],
+            [ null, 'Topology', urlNmsTopology, null, null],
+		];
+
+	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+}
+
+function createMenu(title) {
+	var menu =
+		[
+            [ null, title, null, null, null],
+		];
+
+	cmDraw ('main_menu', menu, 'hbr', cmThemeGray, 'ThemeGray');
+
+	document.getElementById("main_menu").style.backgroundColor = "#0082c3";
+}
+</script>
+
+<style type="text/css">
+.ThemeGrayMenu, .ThemeGraySubMenuTable {
+	margin: auto;
+	font-size: 16px;
+	border-collapse: collapse;
+}
+</style>

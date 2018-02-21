@@ -1,0 +1,66 @@
+#deviceList {
+	padding-top: 1em;
+	margin-bottom: 2em;
+}
+
+#deviceList h1 {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.topic {
+	font-weight: bold;
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+	font-size: 1.5em;
+	//margin-bottom: 1em;
+}
+
+.chart_block {
+	margin-top: 2em;
+}
+
+.chart_title {
+	font-weight: bold;
+	font-size: 1.3em;
+	margin: 10px 0;
+}
+
+.chart_setting {
+	font-size: 1em;
+	margin: 10px 0;
+}
+
+.port_select {
+	font-size: 1em;
+	width: 80px;
+	margin: 0 10px;
+}
+
+.port_apply {
+	font-size: 1em;
+	margin: 0 10px;
+}
+
+#Port_Status_Table {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+#Port_Status_Table caption {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+#Port_Status_Table th {
+	background-color: #acc8cc;
+	border: 1px solid #729ea5;
+	padding: 8px 12px;
+}
+#Port_Status_Table td {
+	background-color: #d4e3e5;
+	border: 1px solid #729ea5;
+	padding: 4px 6px;
+	text-align: center;
+}

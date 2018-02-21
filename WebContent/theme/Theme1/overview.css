@@ -1,0 +1,89 @@
+.overViewPanel {
+	margin: auto ;
+	margin-top: 10px;
+}
+.overViewPanel caption {
+	font-size: 1.3em;
+	font-weight: bold;
+	border-bottom: 1px solid #729ea5;
+}
+.info_table {
+	width:500px;
+	border-bottom: 1px solid #729ea5;
+}
+.info_table td {
+	border-bottom: 1px solid #729ea5;
+}
+.info_height {
+	height: 170px;
+}
+.info_color {
+	color:#556b2f;
+}
+/**********************************/
+.div_bar {
+	/* background-color: #87cefa;
+	width: 100%;
+	line-height: 20px;			
+	text-align: center; */
+	font-weight: bold;
+	font-size: 1em;
+	height: 20px;
+}
+.overViewTable_l {
+	margin: auto ;
+}
+.overViewTable_l caption {
+	font-size: 1.3em;
+	font-weight: bold;
+	border-bottom: 1px solid #729ea5;
+}
+.overViewTable {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+.overViewTable th {
+	border-bottom: 1px solid #729ea5;
+}
+.overViewTable td {
+	text-align: center;
+	border-bottom: 1px solid #729ea5;
+}
+.overViewTable_b {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+.overViewTable_b th {
+	padding: 5px 5px;
+	border: 1px solid #729ea5;
+}
+.overViewTable_b td {
+	padding: 5px 5px;
+	text-align: center;
+	border: 1px solid #729ea5;
+}
+.poe_vlan {
+	height: 300px;
+}
+/**********************************/
+.chart_title {
+	font-weight: bold;
+	font-size: 1em;
+	margin: 10px 0;
+}
+.chart_setting {
+	font-size: 1em;
+	margin: 10px 0;
+	font-weight: bold;
+}
+.port_select {
+	font-size: 1em;
+	width: 80px;
+	margin: 0 10px;
+}
+.port_apply {
+	font-size: 1em;
+	margin: 0 10px;
+}

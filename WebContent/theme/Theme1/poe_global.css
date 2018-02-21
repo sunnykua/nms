@@ -1,0 +1,20 @@
+#PoE_Global_Table {
+	table-layout: fixed;
+	margin: auto;
+	border-collapse: collapse;
+}
+#PoE_Global_Table caption {
+	font-weight: bold;
+	font-size: 1em;
+}
+#PoE_Global_Table th {
+	/* background-color: #acc8cc; */
+	border: 1px solid #729ea5;
+	padding: 6px; /* 10px to 6px */
+}
+#PoE_Global_Table td {
+	/* background-color: #d4e3e5; */
+	border: 1px solid #729ea5;
+	padding: 6px; /* 10px to 6px */
+	text-align: center;
+}

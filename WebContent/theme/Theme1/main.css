@@ -1,0 +1,24 @@
+body, html {
+	margin: 0;
+	height: 100%;
+}
+
+#account_bar {
+	background-color: silver;
+	width: 100%;
+	line-height: 20px;				/* centralize the text in vertical direction */
+	text-align: center;
+	font-size: 1em;
+	height: 20px;
+}
+
+#header_bar {
+	/* font-family: Tahoma; */
+	background-color: #87cefa;
+	width: 100%;
+	line-height: 60px;
+	text-align: center;
+	font-weight: bold;
+	/* font-size: 2em; */
+	height: 60px;
+}

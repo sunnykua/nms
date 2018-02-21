@@ -1,0 +1,124 @@
+<link rel="stylesheet" type="text/css" href="theme/Theme1/link_view.css">
+<link rel="stylesheet" type="text/css" href="theme/Theme1/overview.css">
+<link href="theme/Pacifico/Pacifico.css" rel="stylesheet" type="text/css">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<c:forEach var="dev" items="${applicationScope.network.deviceList}" varStatus="status">
+<c:if test="${dev.publicIp==param.ip}">
+<table class="overViewPanel">
+       <caption>Information <font color="#556b2f">${param.ip}</font></caption>
+	   <tr VALIGN=TOP>
+			<td>
+			    <div class="info_height">
+				<jsp:include page="/Device">
+					<jsp:param value="device_info" name="method" />
+					<jsp:param value="${param.ip}" name="ip" />
+				</jsp:include>
+
+				
+					<table class="info_table">
+						<tr>
+							<td>Description</td>
+							<td class="info_color">${sysDescr}</td>
+						</tr>
+						<tr>
+							<td>Object ID</td>
+							<td class="info_color">${sysObjectId}</td>
+						</tr>
+						<tr>
+							<td>Up Time</td>
+							<td class="info_color">${sysUpTime}</td>
+						</tr>
+						<tr>
+							<td>Contact</td>
+							<td class="info_color">${sysContact}</td>
+						</tr>
+						<tr>
+							<td>Name</td>
+							<td class="info_color">${sysName}</td>
+						</tr>
+						<tr>
+							<td>Location</td>
+							<td class="info_color">${sysLocation}</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td>
+			    <div <c:if test="${dev.stackNum == 1}">class="info_height"</c:if>>
+				<jsp:include page="/LinkView">
+					<jsp:param value="${param.ip}" name="ip" />
+				</jsp:include>
+
+				<table class="panel" cellspacing="0">
+					<tr>
+						<td colspan="12"><table class="legend" cellspacing="0">
+								<tr>
+									<td><div class="iconAdminDown"></div></td>
+									<td class="iconText">AdminDown</td>
+									<td><div class="iconLinkUp"></div></td>
+									<td class="iconText">LinkUp</td>
+									<td><div class="iconLinkDown"></div></td>
+									<td class="iconText">LinkDown</td>
+								</tr>
+							</table></td>
+					</tr>
+					<c:forEach begin="1" end="${dev.stackNum}" varStatus="stackId">
+					<c:if test="${dev.stackNum > 1}">
+						<tr>
+							<th colspan="12">Stack ${stackId.index}</th>
+						</tr>
+					</c:if>
+					
+						<c:forEach begin="0" end="${dev.infNum}" var="inf" items="${dev.interfaces}" varStatus="stack">
+							<c:if test="${inf.ifType == 'eth' && inf.stackId == stackId.index}">
+								<c:set var="ethNum" scope="session" value="${stack.count}"/>
+							</c:if>
+						</c:forEach>
+					<fmt:parseNumber var="rowCount" type="number" value="${(ethNum -1) / 12}" integerOnly="true" /><%-- ***** Need To Be Modify ***** --%>
+					<%-- <c:set var="rowCount" value="2" scope="request"/> --%><%-- ***** work around here ***** --%>
+						<c:forEach var="i" begin="0" end="${rowCount}" varStatus="rowStatus">
+							<tr>
+								<c:forEach var="item" items="${linkView}">
+									<c:if test="${item.stackId == stackId.index}">
+										<fmt:parseNumber var="rowId" type="number" value="${(item.portId -1) / 12}" integerOnly="true" />
+										<c:if test="${rowId == i}">
+											<th class="portId">${item.portId}</th>
+										</c:if>
+									</c:if>
+								</c:forEach>
+							</tr>
+							<tr>
+								<c:forEach var="item" items="${linkView}">
+									<c:if test="${item.stackId == stackId.index}">
+										<fmt:parseNumber var="rowId" type="number" value="${(item.portId -1) / 12}" integerOnly="true" />
+										<c:if test="${rowId == i}">
+										<c:choose>
+											<c:when test="${item.adminStatus != '1'}">
+												<%-- '1': Admin Up --%>
+												<td class="adminDown"></td>
+											</c:when>
+											<c:when test="${item.operStatus == '1'}">
+												<%-- '1': Oper Up --%>
+												<td class="linkUp"></td>
+											</c:when>
+											<c:otherwise>
+												<td class="linkDown"></td>
+											</c:otherwise>
+										</c:choose>
+										</c:if>
+									</c:if>
+								</c:forEach>
+							</tr>
+						</c:forEach>
+					</c:forEach>
+				</table>
+				</div>
+			</td>
+		</tr>
+</table>
+</c:if>
+</c:forEach>
+<hr>

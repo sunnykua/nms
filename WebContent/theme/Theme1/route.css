@@ -1,0 +1,10 @@
+#page_content {
+    padding-top: 1em;
+    margin-bottom: 2em;
+}
+#page_title {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+}
